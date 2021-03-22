@@ -80,5 +80,12 @@ TheMealDB: https://www.themealdb.com/api.php
 
 (5) Description of API:
     <ol>https://www.themealdb.com/api.php</ol>
-    <ol>Its an open online database of food meal recipes. It allows features like uploading meal images, browsing meals in sequence, categorizing meals </ol>
+    <ol>It’s an open online database of food meal recipes. It allows features like uploading meals with images, browsing meals in sequence, categorizing meals. Users can look up meals by name and id, they can list all categories, area, ingredients.</ol>
+
+    <ol>Every meal uploaded has an unique id, name, category(e.g. “vegetarian” or “non vegetarian”), area(e.g. “Italian”, “Japanese”, etc.), cooking instructions, thumbnails, tags for keywords description(e.g. “pasta”, “curry”, etc.), youtube link for the meal cooking tutorial, ingredients and their measurements, date modified, and etc.</ol>
+
+    <ol>Sample picture:
+    ![theMealDb](https://user-images.githubusercontent.com/57330426/111953196-8922e580-8aa3-11eb-9445-0c4df0b75d51.jpg)
+
+ </ol>
 
