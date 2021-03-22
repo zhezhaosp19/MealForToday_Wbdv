@@ -1,5 +1,8 @@
 # CS5610 - Finale Project - MealForToday
 
+## P1 - Form Teams & Project Description
+Link to Google Doc - https://docs.google.com/document/d/1uI5EJ3O5zHswMxdKG9d06cPd5Ohj8s01QrvJEwePU84/edit?usp=sharing
+
 
 ## Open-source API/libraries
 TheMealDB: https://www.themealdb.com/api.php
