@@ -5,6 +5,7 @@ TheMealDB: https://www.themealdb.com/api.php
     - User: search recipe by keyword, comment and publish cooking results in each recipe page 
         (findRecipebyName)
     - Admin: delete plagiaristic recipes (if some recipes are reported cheating from someone) (Delete)
+
 (2) Strategy: 
     a. Registration:
         - Users can register account, login, and logout
@@ -52,7 +53,7 @@ TheMealDB: https://www.themealdb.com/api.php
     -  Post recipe
         1. This page can only be accessed by chef or admin. 
         2. Post form including image, video, description, ingredients ,and measures.
-        3. 
+   
 (4) Requirement to work with data:
 
 (5) Description of API:
