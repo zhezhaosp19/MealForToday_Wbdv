@@ -1,11 +1,15 @@
+# CS5610 - Finale Project - MealForToday
+
+
+## Open-source API/libraries
 TheMealDB: https://www.themealdb.com/api.php
 
-(1) Possible users - Goals: 
+## (1) Possible users - Goals: 
     <ol>- Chef: publish meals recipe (Create, Browse, Edit, Delete)</ol>
     <ol>- Public user: search recipe by keyword, comment and publish cooking results in each recipe page (findRecipebyName)</ol>
     <ol>- Admin: delete plagiaristic recipes (if some recipes are reported cheating from someone) (Delete)</ol>
 
-(2) Strategy: 
+## (2) Strategy: 
 <ul>
     <li>Registration:
         <ol>- Users can register account, login, and logout</ol>
@@ -36,7 +40,7 @@ TheMealDB: https://www.themealdb.com/api.php
     </li>
  </ul>
 
-(3) Web pages:
+## (3) Web pages:
 <ul>
     <li> Home page: 
         <ol>1. This is also the landing page users will see when they visit our website. </ol>
@@ -77,7 +81,7 @@ TheMealDB: https://www.themealdb.com/api.php
      </ul>
    
 
-(4) Description of API:
+## (4) Description of API:
 <ul>
     <li>API: https://www.themealdb.com/api.php</li>
     <li>It’s an open online database of food meal recipes. It allows features like uploading meals with images, browsing meals in sequence, categorizing meals. Users can look up meals by name and id, they can list all categories, area, ingredients.</li>
