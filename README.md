@@ -4,11 +4,14 @@
 ## Open-source API/libraries
 TheMealDB: https://www.themealdb.com/api.php
 
-## Possible users - Goals: 
-    <ol>- Chef: publish meals recipe (Create, Browse, Edit, Delete)</ol>
-    <ol>- Public user: search recipe by keyword, comment and publish cooking results in each recipe page (findRecipebyName)</ol>
-    <ol>- Admin: delete plagiaristic recipes (if some recipes are reported cheating from someone) (Delete)</ol>
-
+## Possible users 
+<ul>
+   <li>Goals: 
+       <ol>- Chef: publish meals recipe (Create, Browse, Edit, Delete)</ol>
+       <ol>- Public user: search recipe by keyword, comment and publish cooking results in each recipe page (findRecipebyName)</ol>
+       <ol>- Admin: delete plagiaristic recipes (if some recipes are reported cheating from someone) (Delete)</ol>
+   </li>
+<ul/>
 ## Strategy: 
 <ul>
     <li>Registration:
