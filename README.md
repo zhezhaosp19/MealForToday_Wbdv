@@ -11,7 +11,8 @@ TheMealDB: https://www.themealdb.com/api.php
        <ol>- Public user: search recipe by keyword, comment and publish cooking results in each recipe page (findRecipebyName)</ol>
        <ol>- Admin: delete plagiaristic recipes (if some recipes are reported cheating from someone) (Delete)</ol>
    </li>
-<ul/>
+</ul>
+
 ## Strategy: 
 <ul>
     <li>Registration:
