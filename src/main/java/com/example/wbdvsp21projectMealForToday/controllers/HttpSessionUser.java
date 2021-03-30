@@ -36,16 +36,12 @@ public class HttpSessionUser {
         session.invalidate();
     }
 
-    @GetMapping("/api/login/{username}/{password}/{email}/{role}/{birthday}")
+    @GetMapping("/api/login/{username}/{password}")
     public User login(@PathVariable("username") String username,
                       @PathVariable("password") String password,
-                      @PathVariable("email") String email,
-                      @PathVariable("role") String role,
-                      @PathVariable("birthday") String birthday,
                       HttpSession session) {
         for(User user : users) {
-            if(user.getUsername().equals(username) && user.getPassword().equals(password) &&
-                user.getEmail().equals(email) && user.getRole().equals(role) && user.getBirthday().equals(birthday)) {
+            if(user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 session.setAttribute("currentUser", user);
                 return user;
             }
