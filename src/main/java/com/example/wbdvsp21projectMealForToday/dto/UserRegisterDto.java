@@ -1,31 +1,18 @@
-package com.example.wbdvsp21projectMealForToday.models;
+package com.example.wbdvsp21projectMealForToday.dto;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
-import javax.persistence.*;
-
-@Entity
-@Table(name="users")
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class UserRegisterDto {
     private String username;
     private String password;
     private String email;
     private String role;
     private String birthday;
 
-    public User(String username, String password, String email, String role, String birthday) {
+    public UserRegisterDto(String username, String password, String email, String role, String birthday) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.role = role;
         this.birthday = birthday;
-    }
-
-    public User() {
     }
 
     public String getUsername() {

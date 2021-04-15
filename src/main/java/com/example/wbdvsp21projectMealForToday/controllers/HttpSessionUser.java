@@ -1,51 +1,54 @@
 package com.example.wbdvsp21projectMealForToday.controllers;
 
+import com.example.wbdvsp21projectMealForToday.dto.UserRegisterDto;
 import com.example.wbdvsp21projectMealForToday.models.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.wbdvsp21projectMealForToday.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000/")
+//@CrossOrigin(origins = "*") , allowCredentials = "true"
 public class HttpSessionUser {
-    List<User> users = new ArrayList<User>();
+    List<User> users = new ArrayList<>();
 
-    @GetMapping("/api/register/{username}/{password}/{email}/{role}/{birthday}")
-    public User register(@PathVariable("username") String username,
-                         @PathVariable("password") String password,
-                         @PathVariable("email") String email,
-                         @PathVariable("role") String role,
-                         @PathVariable("birthday") String birthday,
+    @Autowired
+    UserService service;
+
+    @PostMapping("/api/register")
+    public User register(@RequestBody User user,
                          HttpSession session) {
-        User user = new User(username, password, email, role, birthday);
-        session.setAttribute("currUser", user);
+        User newUser = service.register(user);
+        session.setAttribute("currUser", newUser);
         users.add(user);
-        return user;
+        return newUser;
     }
 
-    @GetMapping("/api/profile")
+    @PostMapping("/api/profile")
     public User profile(HttpSession session) {
         User currUser = (User) session.getAttribute("currUser");
         return currUser;
     }
 
-    @GetMapping("/api/logout")
+    @PostMapping("/api/logout")
     public void logout (HttpSession session) {
         session.invalidate();
     }
 
-    @GetMapping("/api/login/{username}/{password}")
-    public User login(@PathVariable("username") String username,
-                      @PathVariable("password") String password,
-                      HttpSession session) {
-        for(User user : users) {
-            if(user.getUsername().equals(username) && user.getPassword().equals(password)) {
-                session.setAttribute("currentUser", user);
+    @PostMapping("/api/login")
+    public User login(	@RequestBody User credentials,
+                          HttpSession session) {
+        for (User user : users) {
+            if( user.getUsername().equals(credentials.getUsername())
+                    && user.getPassword().equals(credentials.getPassword())) {
+                session.setAttribute("currUser", user);
                 return user;
             }
         }
         return null;
     }
+
 }
